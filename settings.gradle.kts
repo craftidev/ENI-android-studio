@@ -17,3 +17,4 @@ rootProject.name = "demo"
 include(":app")
 include(":demoihm")
 include(":demokotlin")
+include(":enishop")
