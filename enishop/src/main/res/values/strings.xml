@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">eniShop</string>
+    <string name="submit">Submit</string>
+    <string name="initially_created_at">Initially created at</string>
+    <string name="price">Price</string>
 </resources>
