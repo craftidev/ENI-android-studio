@@ -15,16 +15,8 @@ object ArticleRepository {
     fun getArticleById(id: Long): Article {
         return articleDaoMemoryManager.selectById(id)
     }
-}
 
-fun main() {
-    var article: Article = Article(
-        5,
-        "title",
-        "description",
-        000.00,
-        "#0",
-        LocalDate.now()
-    )
-    println(ArticleRepository.getArticleById(1L))
+    fun create(article: Article): Long {
+        return articleDaoMemoryManager.create(article)
+    }
 }

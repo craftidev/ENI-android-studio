@@ -8,5 +8,5 @@ data class Article (
     var description: String,
     var price: Double,
     var imgUrl: String,
-    var publishedDate: LocalDate
+    val publishedDate: LocalDate
 )
