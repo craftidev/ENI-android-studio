@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/demoihm" />
             <option value="$PROJECT_DIR$/demokotlin" />
             <option value="$PROJECT_DIR$/enishop" />
+            <option value="$PROJECT_DIR$/viewdatabinding" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
