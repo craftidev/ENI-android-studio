@@ -18,5 +18,12 @@
         android:id="@+id/fragmentHome"
         android:name="app.craftid.navcomponent.FragmentHome"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="idArticle"
+            app:argType="long" />
+        <argument
+            android:name="user"
+            app:argType="app.craftid.navcomponent.User" />
+    </fragment>
 </navigation>

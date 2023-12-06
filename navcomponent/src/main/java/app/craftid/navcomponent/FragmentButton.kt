@@ -21,7 +21,16 @@ class FragmentButton : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val button = view.findViewById<Button>(R.id.button)
         button.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentButton_to_fragmentHome)
+            val target = FragmentButtonDirections.actionFragmentButtonToFragmentHome(
+                1L,
+                User(
+                    "Pat",
+                    "Bateman",
+                    16,
+                    "asdf"
+                )
+            )
+            findNavController().navigate(target)
         }
     }
 }
