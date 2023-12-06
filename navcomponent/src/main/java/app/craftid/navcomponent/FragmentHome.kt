@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 
 class FragmentHome : Fragment() {
-    val args by navArgs<FragmentHomeArgs>()
+    private val args by navArgs<FragmentHomeArgs>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

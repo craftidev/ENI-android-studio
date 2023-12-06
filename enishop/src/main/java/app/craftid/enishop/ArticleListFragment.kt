@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import app.craftid.enishop.entities.Article
 import app.craftid.enishop.repositories.ArticleRepository
@@ -22,22 +23,24 @@ class ArticleListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Detail Button
-        val detailButton = view.findViewById<Button>(R.id.goDetailButton)
-
-        detailButton.setOnClickListener {
-            findNavController().navigate(R.id.actionListToDetail)
-        }
-
         // List of articles
         val articleListDisplayContainer = view.findViewById<TextView>(R.id.articleListDisplayContainer)
-
         val articleRepository = ArticleRepository
         val articles: List<Article> = articleRepository.getAllArticles()
         var text = String()
+
         for (article in articles) {
-            text += article.title
+            text += article.title + "\n"
         }
         articleListDisplayContainer.text = text
+
+        // Detail Button
+        val detailButton = view.findViewById<Button>(R.id.goDetailButton)
+        val randomArticle = articles.random()
+
+        detailButton.setOnClickListener {
+            val target: NavDirections = ArticleListFragmentDirections.actionListToDetail(randomArticle)
+            findNavController().navigate(target)
+        }
     }
 }
