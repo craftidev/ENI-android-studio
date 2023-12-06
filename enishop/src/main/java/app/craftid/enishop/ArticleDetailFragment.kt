@@ -8,8 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.navArgs
+import app.craftid.enishop.databinding.ActivityMainBinding
+import app.craftid.enishop.databinding.FragmentArticleDetailBinding
 
 class ArticleDetailFragment : Fragment() {
+    private lateinit var binding: FragmentArticleDetailBinding
     private val args by navArgs<ArticleDetailFragmentArgs>()
 
     override fun onCreateView(
@@ -17,12 +20,12 @@ class ArticleDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_article_detail, container, false)
+        binding = FragmentArticleDetailBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val textDisplayContainer: TextView = view.findViewById<TextView>(R.id.detail)
-        textDisplayContainer.text = args.article.toString()
+        binding.article = args.article
     }
 }
