@@ -39,6 +39,10 @@ class ArticleDaoMemoryImpl: ArticleDAO {
         return articlesInMemory.first { it.id == id }
     }
 
+    override fun selectAll(): List<Article> {
+        return articlesInMemory
+    }
+
     override fun create(article: Article): Long {
         val newId: Long = articlesInMemory.size +1L
         articlesInMemory += Article(

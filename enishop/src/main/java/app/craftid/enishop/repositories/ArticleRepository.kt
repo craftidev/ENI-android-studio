@@ -19,4 +19,8 @@ object ArticleRepository {
     fun create(article: Article): Long {
         return articleDaoMemoryManager.create(article)
     }
+
+    fun getAllArticles(): List<Article> {
+        return articleDaoMemoryManager.selectAll()
+    }
 }

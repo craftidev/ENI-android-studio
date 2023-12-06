@@ -3,4 +3,6 @@
     <string name="submit">Submit</string>
     <string name="initially_created_at">Initially created at</string>
     <string name="price">Price</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
