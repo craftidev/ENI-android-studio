@@ -27,16 +27,19 @@ class CounterActivity : AppCompatActivity() {
         }
     }
 
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        super.onSaveInstanceState(outState)
-//        outState.putInt("counter", counter)
-//    }
-//
-//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-//        super.onRestoreInstanceState(savedInstanceState)
-//        counter = savedInstanceState.getInt("counter")
-//        textViewCounter.text = "$counter"
-//    }
+//    Put in cache:
+/*
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("counter", counter)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        counter = savedInstanceState.getInt("counter")
+        textViewCounter.text = "$counter"
+    }
+*/
 
     override fun onStart() {
         super.onStart()
