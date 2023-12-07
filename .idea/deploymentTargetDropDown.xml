@@ -11,6 +11,12 @@
       <entry key="enishop">
         <State />
       </entry>
+      <entry key="intent">
+        <State />
+      </entry>
+      <entry key="menu">
+        <State />
+      </entry>
       <entry key="navcomponent">
         <State />
       </entry>
