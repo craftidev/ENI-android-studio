@@ -3,6 +3,7 @@ package app.craftid.intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 
 class TargetActivity : AppCompatActivity() {
@@ -10,9 +11,8 @@ class TargetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_target)
         val number = intent.getStringExtra(EXTRA_STRING_NUMBER) ?: "Empty number"
-        Log.d("TargetActivity", "Number received: $number")
-//        Toast.makeText(this, number, Toast.LENGTH_SHORT).show()
-        Snackbar.make(findViewById(android.R.id.content), number, Snackbar.LENGTH_LONG).show()
-
+//        Log.d("TargetActivity", "Number received: $number")
+        Toast.makeText(this, number, Toast.LENGTH_SHORT).show()
+//        Snackbar.make(findViewById(android.R.id.content), number, Snackbar.LENGTH_LONG).show()
     }
 }

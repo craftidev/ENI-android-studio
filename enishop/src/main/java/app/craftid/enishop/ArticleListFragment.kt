@@ -43,4 +43,8 @@ class ArticleListFragment : Fragment() {
             findNavController().navigate(target)
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+    }
 }
