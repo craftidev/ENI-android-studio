@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:hint="Title"
                 android:inputType="text"
-                android:text="@{article.title}" />
+                android:text="@={article.title}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -45,7 +45,7 @@
                 android:layout_height="match_parent"
                 android:hint="Description"
                 android:inputType="text"
-                android:text="@{article.description}" />
+                android:text="@={article.description}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

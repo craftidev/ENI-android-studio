@@ -2,8 +2,8 @@ package app.craftid.enishop
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import app.craftid.enishop.databinding.ActivityAddArticleBinding
-import app.craftid.enishop.entities.Article
 import app.craftid.enishop.repositories.ArticleRepository
 import com.google.android.material.snackbar.Snackbar
 import java.time.LocalDate
@@ -14,22 +14,25 @@ class AddArticleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddArticleBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val articleRepository = ArticleRepository
+        binding.article = articleRepository.getArticleById(1L)
 
         binding.submit.setOnClickListener {
-            val newArticle = Article(
-                0,
-                binding.title.text.toString(),
-                binding.description.text.toString(),
-                binding.price.text.toString().toDoubleOrNull() ?: - 1.0,
-                "fakeUrl",
-                LocalDate.now()
+            Snackbar.make(
+                it,
+                "You created: ${binding.title}",
+                Snackbar.LENGTH_LONG
+            ).show()
+
+            val newArticle = binding.article!!.copy(
+                id = 0,
+                imgUrl = "fakeUrl",
+                price = binding.price.text.toString().toDouble(),
+                publishedDate = LocalDate.now()
             )
 
-            Snackbar.make(it, "You created: ${newArticle.title}", Snackbar.LENGTH_SHORT)
-                .show()
-
-            val articleRepository = ArticleRepository
             articleRepository.create(newArticle)
+            finish()
         }
     }
 }

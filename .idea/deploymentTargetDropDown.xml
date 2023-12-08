@@ -14,6 +14,9 @@
       <entry key="intent">
         <State />
       </entry>
+      <entry key="lifecycle">
+        <State />
+      </entry>
       <entry key="menu">
         <State />
       </entry>
