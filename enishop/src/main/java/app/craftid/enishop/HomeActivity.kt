@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import app.craftid.enishop.databinding.ActivityHomeBinding
+import app.craftid.enishop.ui.articlecreate.AddArticleActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding

@@ -1,4 +1,4 @@
-package app.craftid.enishop
+package app.craftid.enishop.ui.articlelist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
+import app.craftid.enishop.R
 import app.craftid.enishop.entities.Article
 import app.craftid.enishop.repositories.ArticleRepository
 
@@ -42,9 +43,7 @@ class ArticleListFragment : Fragment() {
             val target: NavDirections = ArticleListFragmentDirections.actionListToDetail(randomArticle)
             findNavController().navigate(target)
         }
-    }
 
-    override fun onResume() {
-        super.onResume()
+
     }
 }

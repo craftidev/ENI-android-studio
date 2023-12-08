@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddArticleActivity"
+            android:name=".ui.articlecreate.AddArticleActivity"
             android:exported="true">
                 <intent-filter>
                     <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>

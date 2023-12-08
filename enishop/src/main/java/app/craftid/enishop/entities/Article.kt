@@ -6,7 +6,7 @@ import java.time.LocalDate
 
 @Parcelize
 data class Article (
-    val id: Long,
+    val id: Long = 0L,
     var title: String,
     var description: String,
     var price: Double,

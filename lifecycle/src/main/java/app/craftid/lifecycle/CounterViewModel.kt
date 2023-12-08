@@ -11,7 +11,4 @@ class CounterViewModel: ViewModel() {
     fun increment() {
         counter.value = counter.value?.inc()
     }
-    fun decrement() {
-        counter.value = counter.value?.dec()
-    }
 }
