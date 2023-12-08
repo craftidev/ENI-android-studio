@@ -22,8 +22,9 @@ class CounterActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate: ")
 
         binding.counterViewModel = counterViewModel
+        binding.lifecycleOwner = this
         binding.floatingActionButton.setOnClickListener {
-            binding.counterTextView.text = "${counterViewModel.increment()}"
+            counterViewModel.increment()
         }
     }
 
